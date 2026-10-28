@@ -1,0 +1,361 @@
+corpus_size,query_id,type,mode,ranker,synonyms,returned_top3,gold_in_subset,recall_at_3,no_evidence,unanswerable_correct,candidates
+25,Q01,keyword,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q01,keyword,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q02,keyword,scan,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,8
+25,Q02,keyword,index,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,8
+25,Q03,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,4
+25,Q03,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,4
+25,Q04,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,2
+25,Q04,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,2
+25,Q05,keyword,scan,coverage,on,D01-P2,1,1.000,no,n/a,6
+25,Q05,keyword,index,coverage,on,D01-P2,1,1.000,no,n/a,6
+25,Q06,paraphrase,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q06,paraphrase,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q07,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,8
+25,Q07,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,8
+25,Q08,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q08,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q09,version,scan,coverage,on,D04-P3 D04-P1,0,n/a,no,n/a,11
+25,Q09,version,index,coverage,on,D04-P3 D04-P1,0,n/a,no,n/a,11
+25,Q10,version,scan,coverage,on,D01-P3,0,n/a,no,n/a,10
+25,Q10,version,index,coverage,on,D01-P3,0,n/a,no,n/a,10
+25,Q11,ambiguous,scan,coverage,on,D01-P3 D03-P4 D04-P1,1,1.000,no,n/a,11
+25,Q11,ambiguous,index,coverage,on,D01-P3 D03-P4 D04-P1,1,1.000,no,n/a,11
+25,Q12,ambiguous,scan,coverage,on,NO-EVIDENCE,1,0.000,yes,n/a,3
+25,Q12,ambiguous,index,coverage,on,NO-EVIDENCE,1,0.000,yes,n/a,3
+25,Q13,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,7
+25,Q13,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,7
+25,Q14,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q14,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q15,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q15,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q16,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+25,Q16,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+25,Q17,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,9
+25,Q17,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,9
+25,Q18,version,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,7
+25,Q18,version,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,7
+25,Q19,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q19,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q20,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q20,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q01,keyword,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q01,keyword,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q02,keyword,scan,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,8
+25,Q02,keyword,index,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,8
+25,Q03,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,4
+25,Q03,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,4
+25,Q04,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,2
+25,Q04,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,2
+25,Q05,keyword,scan,bm25f,on,D01-P2,1,1.000,no,n/a,6
+25,Q05,keyword,index,bm25f,on,D01-P2,1,1.000,no,n/a,6
+25,Q06,paraphrase,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q06,paraphrase,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,6
+25,Q07,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,8
+25,Q07,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,8
+25,Q08,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q08,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q09,version,scan,bm25f,on,D04-P3 D04-P1,0,n/a,no,n/a,11
+25,Q09,version,index,bm25f,on,D04-P3 D04-P1,0,n/a,no,n/a,11
+25,Q10,version,scan,bm25f,on,D01-P3,0,n/a,no,n/a,10
+25,Q10,version,index,bm25f,on,D01-P3,0,n/a,no,n/a,10
+25,Q11,ambiguous,scan,bm25f,on,D01-P3 D03-P4 D04-P1,1,1.000,no,n/a,11
+25,Q11,ambiguous,index,bm25f,on,D01-P3 D03-P4 D04-P1,1,1.000,no,n/a,11
+25,Q12,ambiguous,scan,bm25f,on,NO-EVIDENCE,1,0.000,yes,n/a,3
+25,Q12,ambiguous,index,bm25f,on,NO-EVIDENCE,1,0.000,yes,n/a,3
+25,Q13,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,7
+25,Q13,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,7
+25,Q14,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q14,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q15,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q15,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q16,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+25,Q16,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+25,Q17,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,9
+25,Q17,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,9
+25,Q18,version,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,7
+25,Q18,version,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,7
+25,Q19,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q19,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+25,Q20,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+25,Q20,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q01,keyword,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,9
+50,Q01,keyword,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,9
+50,Q02,keyword,scan,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,12
+50,Q02,keyword,index,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,12
+50,Q03,keyword,scan,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,7
+50,Q03,keyword,index,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,7
+50,Q04,keyword,scan,coverage,on,D10-P3,1,1.000,no,n/a,4
+50,Q04,keyword,index,coverage,on,D10-P3,1,1.000,no,n/a,4
+50,Q05,keyword,scan,coverage,on,D01-P2,1,1.000,no,n/a,13
+50,Q05,keyword,index,coverage,on,D01-P2,1,1.000,no,n/a,13
+50,Q06,paraphrase,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+50,Q06,paraphrase,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+50,Q07,paraphrase,scan,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,14
+50,Q07,paraphrase,index,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,14
+50,Q08,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+50,Q08,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+50,Q09,version,scan,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,18
+50,Q09,version,index,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,18
+50,Q10,version,scan,coverage,on,D01-P3 D06-P4,0,n/a,no,n/a,19
+50,Q10,version,index,coverage,on,D01-P3 D06-P4,0,n/a,no,n/a,19
+50,Q11,ambiguous,scan,coverage,on,D01-P3 D06-P4 D03-P4,2,1.000,no,n/a,17
+50,Q11,ambiguous,index,coverage,on,D01-P3 D06-P4 D03-P4,2,1.000,no,n/a,17
+50,Q12,ambiguous,scan,coverage,on,D10-P2,1,0.000,no,n/a,5
+50,Q12,ambiguous,index,coverage,on,D10-P2,1,0.000,no,n/a,5
+50,Q13,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,15
+50,Q13,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,15
+50,Q14,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q14,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q15,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q15,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q16,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,3
+50,Q16,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,3
+50,Q17,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,19
+50,Q17,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,19
+50,Q18,version,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,13
+50,Q18,version,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,13
+50,Q19,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q19,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q20,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q20,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q01,keyword,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,9
+50,Q01,keyword,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,9
+50,Q02,keyword,scan,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,12
+50,Q02,keyword,index,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,12
+50,Q03,keyword,scan,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,7
+50,Q03,keyword,index,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,7
+50,Q04,keyword,scan,bm25f,on,D10-P3,1,1.000,no,n/a,4
+50,Q04,keyword,index,bm25f,on,D10-P3,1,1.000,no,n/a,4
+50,Q05,keyword,scan,bm25f,on,D01-P2,1,1.000,no,n/a,13
+50,Q05,keyword,index,bm25f,on,D01-P2,1,1.000,no,n/a,13
+50,Q06,paraphrase,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+50,Q06,paraphrase,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+50,Q07,paraphrase,scan,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,14
+50,Q07,paraphrase,index,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,14
+50,Q08,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+50,Q08,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,1
+50,Q09,version,scan,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,18
+50,Q09,version,index,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,18
+50,Q10,version,scan,bm25f,on,D01-P3 D06-P4,0,n/a,no,n/a,19
+50,Q10,version,index,bm25f,on,D01-P3 D06-P4,0,n/a,no,n/a,19
+50,Q11,ambiguous,scan,bm25f,on,D06-P4 D01-P3 D03-P4,2,1.000,no,n/a,17
+50,Q11,ambiguous,index,bm25f,on,D06-P4 D01-P3 D03-P4,2,1.000,no,n/a,17
+50,Q12,ambiguous,scan,bm25f,on,D10-P2,1,0.000,no,n/a,5
+50,Q12,ambiguous,index,bm25f,on,D10-P2,1,0.000,no,n/a,5
+50,Q13,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,15
+50,Q13,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,15
+50,Q14,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q14,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q15,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q15,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q16,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,3
+50,Q16,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,3
+50,Q17,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,19
+50,Q17,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,19
+50,Q18,version,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,13
+50,Q18,version,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,13
+50,Q19,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q19,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+50,Q20,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+50,Q20,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+100,Q01,keyword,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+100,Q01,keyword,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+100,Q02,keyword,scan,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+100,Q02,keyword,index,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+100,Q03,keyword,scan,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,15
+100,Q03,keyword,index,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,15
+100,Q04,keyword,scan,coverage,on,D10-P3,1,1.000,no,n/a,7
+100,Q04,keyword,index,coverage,on,D10-P3,1,1.000,no,n/a,7
+100,Q05,keyword,scan,coverage,on,D01-P2,1,1.000,no,n/a,20
+100,Q05,keyword,index,coverage,on,D01-P2,1,1.000,no,n/a,20
+100,Q06,paraphrase,scan,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,22
+100,Q06,paraphrase,index,coverage,on,D02-P1 D02-P3,1,1.000,no,n/a,22
+100,Q07,paraphrase,scan,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+100,Q07,paraphrase,index,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+100,Q08,paraphrase,scan,coverage,on,D14-P2,1,1.000,no,n/a,5
+100,Q08,paraphrase,index,coverage,on,D14-P2,1,1.000,no,n/a,5
+100,Q09,version,scan,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,36
+100,Q09,version,index,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,36
+100,Q10,version,scan,coverage,on,D20-P2 D01-P3 D19-P2,1,1.000,no,n/a,36
+100,Q10,version,index,coverage,on,D20-P2 D01-P3 D19-P2,1,1.000,no,n/a,36
+100,Q11,ambiguous,scan,coverage,on,D01-P3 D06-P4 D20-P1,2,1.000,no,n/a,38
+100,Q11,ambiguous,index,coverage,on,D01-P3 D06-P4 D20-P1,2,1.000,no,n/a,38
+100,Q12,ambiguous,scan,coverage,on,D12-P3 D10-P2,2,0.500,no,n/a,12
+100,Q12,ambiguous,index,coverage,on,D12-P3 D10-P2,2,0.500,no,n/a,12
+100,Q13,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,27
+100,Q13,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,27
+100,Q14,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,1
+100,Q14,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,1
+100,Q15,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q15,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q16,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,11
+100,Q16,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,11
+100,Q17,paraphrase,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,41
+100,Q17,paraphrase,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,41
+100,Q18,version,scan,coverage,on,D20-P1,0,n/a,no,n/a,26
+100,Q18,version,index,coverage,on,D20-P1,0,n/a,no,n/a,26
+100,Q19,keyword,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q19,keyword,index,coverage,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q20,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+100,Q20,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+100,Q01,keyword,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+100,Q01,keyword,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,11
+100,Q02,keyword,scan,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+100,Q02,keyword,index,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+100,Q03,keyword,scan,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,15
+100,Q03,keyword,index,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,15
+100,Q04,keyword,scan,bm25f,on,D10-P3,1,1.000,no,n/a,7
+100,Q04,keyword,index,bm25f,on,D10-P3,1,1.000,no,n/a,7
+100,Q05,keyword,scan,bm25f,on,D01-P2,1,1.000,no,n/a,20
+100,Q05,keyword,index,bm25f,on,D01-P2,1,1.000,no,n/a,20
+100,Q06,paraphrase,scan,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,22
+100,Q06,paraphrase,index,bm25f,on,D02-P1 D02-P3,1,1.000,no,n/a,22
+100,Q07,paraphrase,scan,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+100,Q07,paraphrase,index,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+100,Q08,paraphrase,scan,bm25f,on,D14-P2,1,1.000,no,n/a,5
+100,Q08,paraphrase,index,bm25f,on,D14-P2,1,1.000,no,n/a,5
+100,Q09,version,scan,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,36
+100,Q09,version,index,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,36
+100,Q10,version,scan,bm25f,on,D20-P2 D01-P3 D06-P4,1,1.000,no,n/a,36
+100,Q10,version,index,bm25f,on,D20-P2 D01-P3 D06-P4,1,1.000,no,n/a,36
+100,Q11,ambiguous,scan,bm25f,on,D06-P4 D01-P3 D13-P3,2,1.000,no,n/a,38
+100,Q11,ambiguous,index,bm25f,on,D06-P4 D01-P3 D13-P3,2,1.000,no,n/a,38
+100,Q12,ambiguous,scan,bm25f,on,D12-P3 D10-P2,2,0.500,no,n/a,12
+100,Q12,ambiguous,index,bm25f,on,D12-P3 D10-P2,2,0.500,no,n/a,12
+100,Q13,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,27
+100,Q13,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,27
+100,Q14,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,1
+100,Q14,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,1
+100,Q15,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q15,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q16,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,11
+100,Q16,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,11
+100,Q17,paraphrase,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,41
+100,Q17,paraphrase,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,41
+100,Q18,version,scan,bm25f,on,D20-P1,0,n/a,no,n/a,26
+100,Q18,version,index,bm25f,on,D20-P1,0,n/a,no,n/a,26
+100,Q19,keyword,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q19,keyword,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,n/a,0
+100,Q20,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+100,Q20,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q01,keyword,scan,coverage,on,D02-P1 D23-P4 D23-P5,2,1.000,no,n/a,19
+155,Q01,keyword,index,coverage,on,D02-P1 D23-P4 D23-P5,2,1.000,no,n/a,19
+155,Q02,keyword,scan,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q02,keyword,index,coverage,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q03,keyword,scan,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q03,keyword,index,coverage,on,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q04,keyword,scan,coverage,on,D10-P3,1,1.000,no,n/a,7
+155,Q04,keyword,index,coverage,on,D10-P3,1,1.000,no,n/a,7
+155,Q05,keyword,scan,coverage,on,D01-P2,1,1.000,no,n/a,32
+155,Q05,keyword,index,coverage,on,D01-P2,1,1.000,no,n/a,32
+155,Q06,paraphrase,scan,coverage,on,D02-P1 D23-P3 D23-P4,2,1.000,no,n/a,37
+155,Q06,paraphrase,index,coverage,on,D02-P1 D23-P3 D23-P4,2,1.000,no,n/a,37
+155,Q07,paraphrase,scan,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+155,Q07,paraphrase,index,coverage,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+155,Q08,paraphrase,scan,coverage,on,D14-P2,1,1.000,no,n/a,6
+155,Q08,paraphrase,index,coverage,on,D14-P2,1,1.000,no,n/a,6
+155,Q09,version,scan,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,41
+155,Q09,version,index,coverage,on,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,41
+155,Q10,version,scan,coverage,on,D20-P2 D01-P3 D19-P2,1,1.000,no,n/a,41
+155,Q10,version,index,coverage,on,D20-P2 D01-P3 D19-P2,1,1.000,no,n/a,41
+155,Q11,ambiguous,scan,coverage,on,D01-P3 D06-P4 D20-P1,2,1.000,no,n/a,44
+155,Q11,ambiguous,index,coverage,on,D01-P3 D06-P4 D20-P1,2,1.000,no,n/a,44
+155,Q12,ambiguous,scan,coverage,on,D12-P3 D29-P3 D10-P2,2,0.500,no,n/a,17
+155,Q12,ambiguous,index,coverage,on,D12-P3 D29-P3 D10-P2,2,0.500,no,n/a,17
+155,Q13,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q13,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q14,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q14,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q15,keyword,scan,coverage,on,D27-P1,1,1.000,no,n/a,5
+155,Q15,keyword,index,coverage,on,D27-P1,1,1.000,no,n/a,5
+155,Q16,keyword,scan,coverage,on,D25-P1,1,1.000,no,n/a,20
+155,Q16,keyword,index,coverage,on,D25-P1,1,1.000,no,n/a,20
+155,Q17,paraphrase,scan,coverage,on,D26-P1,1,1.000,no,n/a,68
+155,Q17,paraphrase,index,coverage,on,D26-P1,1,1.000,no,n/a,68
+155,Q18,version,scan,coverage,on,D29-P1 D28-P1 D20-P1,1,1.000,no,n/a,39
+155,Q18,version,index,coverage,on,D29-P1 D28-P1 D20-P1,1,1.000,no,n/a,39
+155,Q19,keyword,scan,coverage,on,D31-P1 D31-P3 D31-P4,2,1.000,no,n/a,5
+155,Q19,keyword,index,coverage,on,D31-P1 D31-P3 D31-P4,2,1.000,no,n/a,5
+155,Q20,unanswerable,scan,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q20,unanswerable,index,coverage,on,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q01,keyword,scan,bm25f,on,D02-P1 D23-P4 D02-P3,2,1.000,no,n/a,19
+155,Q01,keyword,index,bm25f,on,D02-P1 D23-P4 D02-P3,2,1.000,no,n/a,19
+155,Q02,keyword,scan,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q02,keyword,index,bm25f,on,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q03,keyword,scan,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q03,keyword,index,bm25f,on,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q04,keyword,scan,bm25f,on,D10-P3,1,1.000,no,n/a,7
+155,Q04,keyword,index,bm25f,on,D10-P3,1,1.000,no,n/a,7
+155,Q05,keyword,scan,bm25f,on,D01-P2,1,1.000,no,n/a,32
+155,Q05,keyword,index,bm25f,on,D01-P2,1,1.000,no,n/a,32
+155,Q06,paraphrase,scan,bm25f,on,D02-P1 D23-P3 D23-P4,2,1.000,no,n/a,37
+155,Q06,paraphrase,index,bm25f,on,D02-P1 D23-P3 D23-P4,2,1.000,no,n/a,37
+155,Q07,paraphrase,scan,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+155,Q07,paraphrase,index,bm25f,on,D08-P2 D08-P1,2,0.500,no,n/a,31
+155,Q08,paraphrase,scan,bm25f,on,D14-P2,1,1.000,no,n/a,6
+155,Q08,paraphrase,index,bm25f,on,D14-P2,1,1.000,no,n/a,6
+155,Q09,version,scan,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,41
+155,Q09,version,index,bm25f,on,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,41
+155,Q10,version,scan,bm25f,on,D20-P2 D01-P3 D06-P4,1,1.000,no,n/a,41
+155,Q10,version,index,bm25f,on,D20-P2 D01-P3 D06-P4,1,1.000,no,n/a,41
+155,Q11,ambiguous,scan,bm25f,on,D06-P4 D01-P3 D25-P5,2,1.000,no,n/a,44
+155,Q11,ambiguous,index,bm25f,on,D06-P4 D01-P3 D25-P5,2,1.000,no,n/a,44
+155,Q12,ambiguous,scan,bm25f,on,D12-P3 D29-P3 D10-P2,2,0.500,no,n/a,17
+155,Q12,ambiguous,index,bm25f,on,D12-P3 D29-P3 D10-P2,2,0.500,no,n/a,17
+155,Q13,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q13,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q14,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q14,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q15,keyword,scan,bm25f,on,D27-P1,1,1.000,no,n/a,5
+155,Q15,keyword,index,bm25f,on,D27-P1,1,1.000,no,n/a,5
+155,Q16,keyword,scan,bm25f,on,D25-P1,1,1.000,no,n/a,20
+155,Q16,keyword,index,bm25f,on,D25-P1,1,1.000,no,n/a,20
+155,Q17,paraphrase,scan,bm25f,on,D26-P1,1,1.000,no,n/a,68
+155,Q17,paraphrase,index,bm25f,on,D26-P1,1,1.000,no,n/a,68
+155,Q18,version,scan,bm25f,on,D29-P1 D20-P1 D28-P1,1,1.000,no,n/a,39
+155,Q18,version,index,bm25f,on,D29-P1 D20-P1 D28-P1,1,1.000,no,n/a,39
+155,Q19,keyword,scan,bm25f,on,D31-P1 D31-P5 D31-P4,2,1.000,no,n/a,5
+155,Q19,keyword,index,bm25f,on,D31-P1 D31-P5 D31-P4,2,1.000,no,n/a,5
+155,Q20,unanswerable,scan,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q20,unanswerable,index,bm25f,on,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q01,keyword,index,coverage,off,D02-P1 D23-P4 D23-P5,2,1.000,no,n/a,19
+155,Q02,keyword,index,coverage,off,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q03,keyword,index,coverage,off,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q04,keyword,index,coverage,off,D10-P3,1,1.000,no,n/a,7
+155,Q05,keyword,index,coverage,off,D01-P2,1,1.000,no,n/a,32
+155,Q06,paraphrase,index,coverage,off,NO-EVIDENCE,2,0.000,yes,n/a,11
+155,Q07,paraphrase,index,coverage,off,D08-P2,2,0.500,no,n/a,5
+155,Q08,paraphrase,index,coverage,off,NO-EVIDENCE,1,0.000,yes,n/a,6
+155,Q09,version,index,coverage,off,D04-P3 D09-P1 D04-P1,2,0.500,no,n/a,41
+155,Q10,version,index,coverage,off,D20-P2 D01-P3 D19-P2,1,1.000,no,n/a,41
+155,Q11,ambiguous,index,coverage,off,D01-P3 D06-P4 D20-P1,2,1.000,no,n/a,44
+155,Q12,ambiguous,index,coverage,off,D12-P3,2,0.500,no,n/a,7
+155,Q13,unanswerable,index,coverage,off,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q14,unanswerable,index,coverage,off,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q15,keyword,index,coverage,off,D27-P1,1,1.000,no,n/a,5
+155,Q16,keyword,index,coverage,off,D25-P1,1,1.000,no,n/a,20
+155,Q17,paraphrase,index,coverage,off,D26-P1,1,1.000,no,n/a,68
+155,Q18,version,index,coverage,off,D29-P1 D28-P1 D20-P1,1,1.000,no,n/a,39
+155,Q19,keyword,index,coverage,off,D31-P1 D31-P3 D31-P4,2,1.000,no,n/a,5
+155,Q20,unanswerable,index,coverage,off,NO-EVIDENCE,0,n/a,yes,yes,0
+155,Q01,keyword,index,bm25f,off,D02-P1 D23-P4 D02-P3,2,1.000,no,n/a,19
+155,Q02,keyword,index,bm25f,off,D03-P2 D03-P1,1,1.000,no,n/a,29
+155,Q03,keyword,index,bm25f,off,D10-P2 D10-P1,1,1.000,no,n/a,20
+155,Q04,keyword,index,bm25f,off,D10-P3,1,1.000,no,n/a,7
+155,Q05,keyword,index,bm25f,off,D01-P2,1,1.000,no,n/a,32
+155,Q06,paraphrase,index,bm25f,off,NO-EVIDENCE,2,0.000,yes,n/a,11
+155,Q07,paraphrase,index,bm25f,off,D08-P2,2,0.500,no,n/a,5
+155,Q08,paraphrase,index,bm25f,off,NO-EVIDENCE,1,0.000,yes,n/a,6
+155,Q09,version,index,bm25f,off,D09-P1 D04-P3 D04-P1,2,0.500,no,n/a,41
+155,Q10,version,index,bm25f,off,D20-P2 D01-P3 D06-P4,1,1.000,no,n/a,41
+155,Q11,ambiguous,index,bm25f,off,D06-P4 D01-P3 D25-P5,2,1.000,no,n/a,44
+155,Q12,ambiguous,index,bm25f,off,D12-P3,2,0.500,no,n/a,7
+155,Q13,unanswerable,index,bm25f,off,NO-EVIDENCE,0,n/a,yes,yes,46
+155,Q14,unanswerable,index,bm25f,off,NO-EVIDENCE,0,n/a,yes,yes,1
+155,Q15,keyword,index,bm25f,off,D27-P1,1,1.000,no,n/a,5
+155,Q16,keyword,index,bm25f,off,D25-P1,1,1.000,no,n/a,20
+155,Q17,paraphrase,index,bm25f,off,D26-P1,1,1.000,no,n/a,68
+155,Q18,version,index,bm25f,off,D29-P1 D20-P1 D28-P1,1,1.000,no,n/a,39
+155,Q19,keyword,index,bm25f,off,D31-P1 D31-P5 D31-P4,2,1.000,no,n/a,5
+155,Q20,unanswerable,index,bm25f,off,NO-EVIDENCE,0,n/a,yes,yes,0

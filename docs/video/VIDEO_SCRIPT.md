@@ -1,0 +1,28 @@
+# PBL video: script and storyboard (draft for approval)
+
+**Title:** Fast Document Retrieval Engine for a University RAG Assistant
+**Length:** about 3 minutes · **Format:** 16:9, 1920×1080 (a 9:16 version can be cut from it)
+**Style:** taken from the reference video — dark background, one orange accent colour, UI cards
+that snap in, dot-matrix text reveals, a "liquid glass" results card with a rising graph, a
+particle fill, and a grid "stack" end card. Clear English narration with on-screen captions.
+
+All numbers below come from our own `rag eval` / `rag test` runs (see `docs/REPORT_SHORT.md`).
+
+| # | Time | On screen (motion graphics) | Narration (voice-over) |
+|---|---|---|---|
+| 1 | 0:00–0:08 | Black screen. Dot-matrix text forms "155 passages. One question." then morphs into the title. Orange underline sweeps across. | A student asks a question. The answer is hidden somewhere in 155 university notices. How do we find it fast, and prove where it came from? |
+| 2 | 0:08–0:20 | Four photo cards snap in (shutter-strike): Waqas Ali 25CS061, Mehran Ali 25CS009, Gaffar 25CS067, Basit Azam 25CS113. Subtitle: CS-251 DSA · Computer Systems Engineering, MUET Jamshoro · Dr. Ali Asghar Manjotho. | This is our CS-251 Data Structures and Algorithms project-based learning task, from the Department of Computer Systems Engineering at MUET Jamshoro, under Dr. Ali Asghar Manjotho. Team: Waqas Ali, Mehran Ali, Gaffar and Basit Azam. |
+| 3 | 0:20–0:35 | Definition card types itself: "RAG = Retrieval-Augmented Generation". The word *Retrieval* glows orange. A grid of 155 small passage tiles appears. | A RAG assistant first retrieves supporting passages, then writes an answer. Our job is the retrieval step: return the top three passages, each with its passage ID, document, version, date and status. If nothing supports the question, the program must say so. |
+| 4 | 0:35–0:50 | Linear scan: a scanner bar sweeps tile by tile; a counter ticks up through all 1,557 tokens. Caption: "Linear scan · O(T·q)". | The simple method is a linear scan: read every word of every passage for every question. It works, but the cost grows with the total number of tokens, T. |
+| 5 | 0:50–1:05 | Pipeline builds left to right as connected cards: Question → Tokenizer → Hash table → Postings → Ranking → Top-k → Evidence. | Our engine works as a pipeline. The tokenizer splits text into lower-case words, removes stop words and normalises endings. Both methods use exactly the same rules, so the comparison is fair. |
+| 6 | 1:05–1:25 | Hash table: a column of buckets; words fly in, FNV-1a turns each into a number, two words land in one bucket and form a linked chain (collision). Load-factor meter fills to 0.75, then the bucket array doubles. | We built our own hash table. The FNV-1a hash turns each word into a bucket number. When two words land in the same bucket, that is a collision, and we keep both in a linked list — separate chaining. When the table gets three-quarters full, it doubles its buckets. |
+| 7 | 1:25–1:40 | Inverted index: the word "attendance" opens into a postings list: D04-P1 tf1, D09-P1 tf2, D09-P3 tf1. Only those tiles light up in the grid. Caption: "Indexed lookup · O(q + P)". | Each word points to a postings list: the passages that contain it, and how often. At query time we look up only the question's words, so we visit only their postings instead of the whole collection. |
+| 8 | 1:40–2:00 | Ranking: two passage cards side by side. 2025 notice "70 %" has BM25 10.59; a red SUPERSEDED stamp hits it and the score halves to 5.30. The 2026 notice "75 %" (5.83) slides to rank 1. | Candidates are scored with BM25: rare words count more, and long passages are normalised. Then a freshness rule halves the score of superseded notices. That is why the current 2026 attendance rule ranks above the old 2025 one. |
+| 9 | 2:00–2:12 | Evidence rule: "parking permit for student cars" → 46 weak candidates fall away as particles → message "No supported evidence found." | A passage must match at least half of the question's concepts. For "parking permit for student cars", 46 passages share a word, none qualifies, so the engine refuses instead of inventing a rule. |
+| 10 | 2:12–2:25 | Bounded heap: a small tree of k = 3 slots; candidates stream past, only better ones replace the root. Side counter: heap 0.68 ms vs merge sort 2.54 ms (9,700 candidates). | To pick the top k, we use our own bounded min-heap, O(C log k). Sorting every candidate with merge sort costs O(C log C). With 9,700 candidates the heap is almost four times faster, with identical results. |
+| 11 | 2:25–2:45 | Liquid-glass result cards with rising graphs: Recall@3 **91 %** · Speed-up **11× → 15×** (155 → 15,500 passages) · Index memory **64 KB** · Tests **24/24**. | Results: Recall at three is 0.912 on our 20 labelled questions, and all three unanswerable questions are refused. Scan and index return identical answers, but the index is about 11 times faster at 155 passages and 15 times faster at 15,500. All 24 tests pass. |
+| 12 | 2:45–3:00 | Real screenshots push in (screen-push): terminal query, 24/24 tests, GUI "Compare scan vs index". Footer: "All data is synthetic, except D24 (the PBL brief)." | Here is the real program: the command line, the test suite, and our desktop GUI. Every rule in the dataset is synthetic test data, not official MUET policy. |
+| 13 | 3:00–3:10 | Grid "stack" end card: all scenes as tiles, team names, "Thank you, Dr. Ali Asghar Manjotho". | Fast Document Retrieval Engine. Thank you for watching. |
+
+**Voice:** one clear English narrator, calm speed (about 140 words a minute), with captions
+burned in so every word can also be read.

@@ -1,0 +1,241 @@
+=====================================================================
+ Fast Document Retrieval Engine - evaluation report
+=====================================================================
+Corpus file  : data/passages.txt
+Queries file : data/queries.txt (20 questions)
+k = 3, evidence rule: >= 50% of query concepts matched
+Latency: 5 warm-up runs, then 15 measured runs of 40 back-to-back searches; median reported.
+
+---------------------------------------------------------------------
+Corpus size: 25 passages, 284 tokens (T), 197 unique terms (V), 271 postings
+Index build time (median of 7): 0.041 ms
+Index memory: buckets 4.0 KB + nodes 12.3 KB + long keys 0.0 KB + postings 2.3 KB = 18.6 KB
+Document storage (not index): text+metadata 12.6 KB, token arrays 12.5 KB
+Hash table: 512 buckets, load 0.38, longest chain 3, colliding entries 32, resizes 3
+
+Q    type         ranker    index top-3                    R@3     scan us    index us   same?
+Q01  keyword      coverage  D02-P1 D02-P3                  1.00    3.43       0.79       yes
+Q02  keyword      coverage  D03-P2 D03-P1                  1.00    3.59       0.79       yes
+Q03  keyword      coverage  NO-EVIDENCE                    n/a     3.33       0.51       yes
+Q04  keyword      coverage  NO-EVIDENCE                    n/a     2.54       0.54       yes
+Q05  keyword      coverage  D01-P2                         1.00    4.15       0.70       yes
+Q06  paraphrase   coverage  D02-P1 D02-P3                  1.00    3.77       0.72       yes
+Q07  paraphrase   coverage  NO-EVIDENCE                    n/a     3.60       0.64       yes
+Q08  paraphrase   coverage  NO-EVIDENCE                    n/a     2.28       0.20       yes
+Q09  version      coverage  D04-P3 D04-P1                  n/a     3.60       0.94       yes
+Q10  version      coverage  D01-P3                         n/a     3.38       0.84       yes
+Q11  ambiguous    coverage  D01-P3 D03-P4 D04-P1           1.00    3.12       1.09       yes
+Q12  ambiguous    coverage  NO-EVIDENCE                    0.00    2.80       0.40       yes
+Q13  unanswerable coverage  NO-EVIDENCE                    ok      2.65       0.49       yes
+Q14  unanswerable coverage  NO-EVIDENCE                    ok      1.43       0.16       yes
+Q15  keyword      coverage  NO-EVIDENCE                    n/a     1.40       0.16       yes
+Q16  keyword      coverage  NO-EVIDENCE                    n/a     2.19       0.30       yes
+Q17  paraphrase   coverage  NO-EVIDENCE                    n/a     4.05       0.76       yes
+Q18  version      coverage  NO-EVIDENCE                    n/a     3.22       0.54       yes
+Q19  keyword      coverage  NO-EVIDENCE                    n/a     1.21       0.14       yes
+Q20  unanswerable coverage  NO-EVIDENCE                    ok      1.63       0.17       yes
+>> coverage @ 25 passages: average Recall@3 = 0.833 over 6 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 3.17 us vs index 0.54 us
+
+Q01  keyword      bm25f     D02-P1 D02-P3                  1.00    2.77       0.68       yes
+Q02  keyword      bm25f     D03-P2 D03-P1                  1.00    2.90       0.75       yes
+Q03  keyword      bm25f     NO-EVIDENCE                    n/a     2.91       0.47       yes
+Q04  keyword      bm25f     NO-EVIDENCE                    n/a     2.05       0.33       yes
+Q05  keyword      bm25f     D01-P2                         1.00    3.58       0.71       yes
+Q06  paraphrase   bm25f     D02-P1 D02-P3                  1.00    3.69       0.73       yes
+Q07  paraphrase   bm25f     NO-EVIDENCE                    n/a     3.47       0.64       yes
+Q08  paraphrase   bm25f     NO-EVIDENCE                    n/a     2.27       0.20       yes
+Q09  version      bm25f     D04-P3 D04-P1                  n/a     3.61       0.97       yes
+Q10  version      bm25f     D01-P3                         n/a     3.39       0.86       yes
+Q11  ambiguous    bm25f     D01-P3 D03-P4 D04-P1           1.00    3.12       0.98       yes
+Q12  ambiguous    bm25f     NO-EVIDENCE                    0.00    2.77       0.39       yes
+Q13  unanswerable bm25f     NO-EVIDENCE                    ok      2.64       0.50       yes
+Q14  unanswerable bm25f     NO-EVIDENCE                    ok      1.41       0.16       yes
+Q15  keyword      bm25f     NO-EVIDENCE                    n/a     1.41       0.16       yes
+Q16  keyword      bm25f     NO-EVIDENCE                    n/a     2.19       0.30       yes
+Q17  paraphrase   bm25f     NO-EVIDENCE                    n/a     4.08       0.76       yes
+Q18  version      bm25f     NO-EVIDENCE                    n/a     3.20       0.54       yes
+Q19  keyword      bm25f     NO-EVIDENCE                    n/a     1.22       0.14       yes
+Q20  unanswerable bm25f     NO-EVIDENCE                    ok      1.64       0.17       yes
+>> bm25f @ 25 passages: average Recall@3 = 0.833 over 6 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 2.84 us vs index 0.52 us
+
+---------------------------------------------------------------------
+Corpus size: 50 passages, 524 tokens (T), 310 unique terms (V), 503 postings
+Index build time (median of 7): 0.060 ms
+Index memory: buckets 4.0 KB + nodes 19.4 KB + long keys 0.0 KB + postings 4.4 KB = 27.8 KB
+Document storage (not index): text+metadata 24.9 KB, token arrays 23.0 KB
+Hash table: 512 buckets, load 0.61, longest chain 4, colliding entries 75, resizes 3
+
+Q    type         ranker    index top-3                    R@3     scan us    index us   same?
+Q01  keyword      coverage  D02-P1 D02-P3                  1.00    4.47       0.77       yes
+Q02  keyword      coverage  D03-P2 D03-P1                  1.00    4.59       0.86       yes
+Q03  keyword      coverage  D10-P2 D10-P1                  1.00    5.10       0.82       yes
+Q04  keyword      coverage  D10-P3                         1.00    3.48       0.45       yes
+Q05  keyword      coverage  D01-P2                         1.00    6.43       0.97       yes
+Q06  paraphrase   coverage  D02-P1 D02-P3                  1.00    6.43       0.89       yes
+Q07  paraphrase   coverage  D08-P2 D08-P1                  0.50    6.20       1.00       yes
+Q08  paraphrase   coverage  NO-EVIDENCE                    n/a     4.98       0.33       yes
+Q09  version      coverage  D04-P3 D09-P1 D04-P1           0.50    5.79       1.39       yes
+Q10  version      coverage  D01-P3 D06-P4                  n/a     6.17       1.32       yes
+Q11  ambiguous    coverage  D01-P3 D06-P4 D03-P4           1.00    4.75       1.53       yes
+Q12  ambiguous    coverage  D10-P2                         0.00    4.63       0.51       yes
+Q13  unanswerable coverage  NO-EVIDENCE                    ok      4.57       0.78       yes
+Q14  unanswerable coverage  NO-EVIDENCE                    ok      2.44       0.16       yes
+Q15  keyword      coverage  NO-EVIDENCE                    n/a     2.42       0.16       yes
+Q16  keyword      coverage  NO-EVIDENCE                    n/a     3.96       0.41       yes
+Q17  paraphrase   coverage  NO-EVIDENCE                    n/a     7.25       1.19       yes
+Q18  version      coverage  NO-EVIDENCE                    n/a     5.39       0.94       yes
+Q19  keyword      coverage  NO-EVIDENCE                    n/a     1.98       0.14       yes
+Q20  unanswerable coverage  NO-EVIDENCE                    ok      2.83       0.18       yes
+>> coverage @ 50 passages: average Recall@3 = 0.800 over 10 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 4.69 us vs index 0.80 us
+
+Q01  keyword      bm25f     D02-P1 D02-P3                  1.00    4.35       0.81       yes
+Q02  keyword      bm25f     D03-P2 D03-P1                  1.00    4.54       0.93       yes
+Q03  keyword      bm25f     D10-P2 D10-P1                  1.00    5.06       0.83       yes
+Q04  keyword      bm25f     D10-P3                         1.00    3.56       0.47       yes
+Q05  keyword      bm25f     D01-P2                         1.00    6.27       1.01       yes
+Q06  paraphrase   bm25f     D02-P1 D02-P3                  1.00    6.47       0.94       yes
+Q07  paraphrase   bm25f     D08-P2 D08-P1                  0.50    6.13       1.07       yes
+Q08  paraphrase   bm25f     NO-EVIDENCE                    n/a     4.81       0.33       yes
+Q09  version      bm25f     D09-P1 D04-P3 D04-P1           0.50    5.90       1.41       yes
+Q10  version      bm25f     D01-P3 D06-P4                  n/a     5.79       1.41       yes
+Q11  ambiguous    bm25f     D06-P4 D01-P3 D03-P4           1.00    4.84       1.41       yes
+Q12  ambiguous    bm25f     D10-P2                         0.00    4.65       0.51       yes
+Q13  unanswerable bm25f     NO-EVIDENCE                    ok      6.43       0.80       yes
+Q14  unanswerable bm25f     NO-EVIDENCE                    ok      2.46       0.16       yes
+Q15  keyword      bm25f     NO-EVIDENCE                    n/a     2.39       0.16       yes
+Q16  keyword      bm25f     NO-EVIDENCE                    n/a     3.88       0.38       yes
+Q17  paraphrase   bm25f     NO-EVIDENCE                    n/a     7.38       1.24       yes
+Q18  version      bm25f     NO-EVIDENCE                    n/a     5.45       0.84       yes
+Q19  keyword      bm25f     NO-EVIDENCE                    n/a     2.01       0.14       yes
+Q20  unanswerable bm25f     NO-EVIDENCE                    ok      2.91       0.18       yes
+>> bm25f @ 50 passages: average Recall@3 = 0.800 over 10 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 4.83 us vs index 0.82 us
+
+---------------------------------------------------------------------
+Corpus size: 100 passages, 986 tokens (T), 491 unique terms (V), 955 postings
+Index build time (median of 7): 0.132 ms
+Index memory: buckets 8.0 KB + nodes 30.7 KB + long keys 0.0 KB + postings 8.5 KB = 47.2 KB
+Document storage (not index): text+metadata 49.0 KB, token arrays 43.5 KB
+Hash table: 1024 buckets, load 0.48, longest chain 4, colliding entries 112, resizes 4
+
+Q    type         ranker    index top-3                    R@3     scan us    index us   same?
+Q01  keyword      coverage  D02-P1 D02-P3                  1.00    8.47       0.84       yes
+Q02  keyword      coverage  D03-P2 D03-P1                  1.00    9.67       1.76       yes
+Q03  keyword      coverage  D10-P2 D10-P1                  1.00    11.13      1.54       yes
+Q04  keyword      coverage  D10-P3                         1.00    7.09       0.58       yes
+Q05  keyword      coverage  D01-P2                         1.00    13.91      1.36       yes
+Q06  paraphrase   coverage  D02-P1 D02-P3                  1.00    13.73      1.38       yes
+Q07  paraphrase   coverage  D08-P2 D08-P1                  0.50    13.08      1.76       yes
+Q08  paraphrase   coverage  D14-P2                         1.00    13.19      0.58       yes
+Q09  version      coverage  D04-P3 D09-P1 D04-P1           0.50    14.43      2.33       yes
+Q10  version      coverage  D20-P2 D01-P3 D19-P2           1.00    12.04      2.79       yes
+Q11  ambiguous    coverage  D01-P3 D06-P4 D20-P1           1.00    19.23      6.71       yes
+Q12  ambiguous    coverage  D12-P3 D10-P2                  0.50    30.47      1.99       yes
+Q13  unanswerable coverage  NO-EVIDENCE                    ok      10.52      1.23       yes
+Q14  unanswerable coverage  NO-EVIDENCE                    ok      5.48       0.29       yes
+Q15  keyword      coverage  NO-EVIDENCE                    n/a     4.93       0.38       yes
+Q16  keyword      coverage  NO-EVIDENCE                    n/a     8.41       0.67       yes
+Q17  paraphrase   coverage  NO-EVIDENCE                    n/a     16.42      2.26       yes
+Q18  version      coverage  D20-P1                         n/a     11.75      1.43       yes
+Q19  keyword      coverage  NO-EVIDENCE                    n/a     3.84       0.15       yes
+Q20  unanswerable coverage  NO-EVIDENCE                    ok      6.57       0.17       yes
+>> coverage @ 100 passages: average Recall@3 = 0.875 over 12 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 11.44 us vs index 1.37 us
+
+Q01  keyword      bm25f     D02-P1 D02-P3                  1.00    8.94       0.89       yes
+Q02  keyword      bm25f     D03-P2 D03-P1                  1.00    9.99       1.84       yes
+Q03  keyword      bm25f     D10-P2 D10-P1                  1.00    11.56      1.53       yes
+Q04  keyword      bm25f     D10-P3                         1.00    7.43       0.62       yes
+Q05  keyword      bm25f     D01-P2                         1.00    14.21      1.38       yes
+Q06  paraphrase   bm25f     D02-P1 D02-P3                  1.00    13.69      1.40       yes
+Q07  paraphrase   bm25f     D08-P2 D08-P1                  0.50    13.23      1.74       yes
+Q08  paraphrase   bm25f     D14-P2                         1.00    11.96      0.57       yes
+Q09  version      bm25f     D09-P1 D04-P3 D04-P1           0.50    12.93      2.44       yes
+Q10  version      bm25f     D20-P2 D01-P3 D06-P4           1.00    12.20      2.67       yes
+Q11  ambiguous    bm25f     D06-P4 D01-P3 D13-P3           1.00    10.79      2.71       yes
+Q12  ambiguous    bm25f     D12-P3 D10-P2                  0.50    10.92      0.95       yes
+Q13  unanswerable bm25f     NO-EVIDENCE                    ok      9.90       1.26       yes
+Q14  unanswerable bm25f     NO-EVIDENCE                    ok      5.67       0.29       yes
+Q15  keyword      bm25f     NO-EVIDENCE                    n/a     4.67       0.40       yes
+Q16  keyword      bm25f     NO-EVIDENCE                    n/a     8.71       0.68       yes
+Q17  paraphrase   bm25f     NO-EVIDENCE                    n/a     18.32      2.21       yes
+Q18  version      bm25f     D20-P1                         n/a     11.77      1.41       yes
+Q19  keyword      bm25f     NO-EVIDENCE                    n/a     3.83       0.15       yes
+Q20  unanswerable bm25f     NO-EVIDENCE                    ok      6.70       0.17       yes
+>> bm25f @ 100 passages: average Recall@3 = 0.875 over 12 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 10.86 us vs index 1.32 us
+
+---------------------------------------------------------------------
+Corpus size: 155 passages, 1557 tokens (T), 670 unique terms (V), 1501 postings
+Index build time (median of 7): 0.180 ms
+Index memory: buckets 8.0 KB + nodes 41.9 KB + long keys 0.0 KB + postings 14.1 KB = 64.0 KB
+Document storage (not index): text+metadata 93.1 KB, token arrays 68.2 KB
+Hash table: 1024 buckets, load 0.65, longest chain 4, colliding entries 181, resizes 4
+
+Q    type         ranker    index top-3                    R@3     scan us    index us   same?
+Q01  keyword      coverage  D02-P1 D23-P4 D23-P5           1.00    13.68      1.43       yes
+Q02  keyword      coverage  D03-P2 D03-P1                  1.00    14.01      1.57       yes
+Q03  keyword      coverage  D10-P2 D10-P1                  1.00    20.94      1.49       yes
+Q04  keyword      coverage  D10-P3                         1.00    9.77       0.60       yes
+Q05  keyword      coverage  D01-P2                         1.00    23.19      1.99       yes
+Q06  paraphrase   coverage  D02-P1 D23-P3 D23-P4           1.00    31.14      4.74       yes
+Q07  paraphrase   coverage  D08-P2 D08-P1                  0.50    29.65      3.41       yes
+Q08  paraphrase   coverage  D14-P2                         1.00    24.30      0.75       yes
+Q09  version      coverage  D04-P3 D09-P1 D04-P1           0.50    21.04      3.17       yes
+Q10  version      coverage  D20-P2 D01-P3 D19-P2           1.00    23.23      3.68       yes
+Q11  ambiguous    coverage  D01-P3 D06-P4 D20-P1           1.00    15.42      3.58       yes
+Q12  ambiguous    coverage  D12-P3 D29-P3 D10-P2           0.50    21.20      1.54       yes
+Q13  unanswerable coverage  NO-EVIDENCE                    ok      17.37      2.01       yes
+Q14  unanswerable coverage  NO-EVIDENCE                    ok      10.30      0.34       yes
+Q15  keyword      coverage  D27-P1                         1.00    9.78       0.47       yes
+Q16  keyword      coverage  D25-P1                         1.00    15.87      1.25       yes
+Q17  paraphrase   coverage  D26-P1                         1.00    30.03      3.80       yes
+Q18  version      coverage  D29-P1 D28-P1 D20-P1           1.00    19.82      2.42       yes
+Q19  keyword      coverage  D31-P1 D31-P3 D31-P4           1.00    8.01       0.77       yes
+Q20  unanswerable coverage  NO-EVIDENCE                    ok      10.82      0.18       yes
+>> coverage @ 155 passages: average Recall@3 = 0.912 over 17 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 18.59 us vs index 1.55 us
+
+Q01  keyword      bm25f     D02-P1 D23-P4 D02-P3           1.00    14.01      1.51       yes
+Q02  keyword      bm25f     D03-P2 D03-P1                  1.00    14.16      1.59       yes
+Q03  keyword      bm25f     D10-P2 D10-P1                  1.00    17.17      1.53       yes
+Q04  keyword      bm25f     D10-P3                         1.00    10.42      0.63       yes
+Q05  keyword      bm25f     D01-P2                         1.00    23.67      2.05       yes
+Q06  paraphrase   bm25f     D02-P1 D23-P3 D23-P4           1.00    23.74      2.47       yes
+Q07  paraphrase   bm25f     D08-P2 D08-P1                  0.50    19.91      1.75       yes
+Q08  paraphrase   bm25f     D14-P2                         1.00    19.25      0.62       yes
+Q09  version      bm25f     D09-P1 D04-P3 D04-P1           0.50    18.36      2.73       yes
+Q10  version      bm25f     D20-P2 D01-P3 D06-P4           1.00    17.23      3.08       yes
+Q11  ambiguous    bm25f     D06-P4 D01-P3 D25-P5           1.00    13.39      3.02       yes
+Q12  ambiguous    bm25f     D12-P3 D29-P3 D10-P2           0.50    18.41      1.33       yes
+Q13  unanswerable bm25f     NO-EVIDENCE                    ok      18.05      1.96       yes
+Q14  unanswerable bm25f     NO-EVIDENCE                    ok      8.93       0.30       yes
+Q15  keyword      bm25f     D27-P1                         1.00    9.25       0.47       yes
+Q16  keyword      bm25f     D25-P1                         1.00    13.86      1.14       yes
+Q17  paraphrase   bm25f     D26-P1                         1.00    28.67      3.41       yes
+Q18  version      bm25f     D29-P1 D20-P1 D28-P1           1.00    18.72      2.48       yes
+Q19  keyword      bm25f     D31-P1 D31-P5 D31-P4           1.00    7.78       0.74       yes
+Q20  unanswerable bm25f     NO-EVIDENCE                    ok      10.70      0.18       yes
+>> bm25f @ 155 passages: average Recall@3 = 0.912 over 17 answerable questions (with gold in subset); unanswerable correctly refused 3/3; median query time scan 17.20 us vs index 1.56 us
+
+Scan and index returned identical ranked results for every query/ranker/size: YES
+
+---------------------------------------------------------------------
+Ablation: synonym expansion OFF (full corpus, index engine)
+>> coverage: average Recall@3 = 0.794 (17 answerable), unanswerable refused 3/3
+   per query: Q01=1.00 Q02=1.00 Q03=1.00 Q04=1.00 Q05=1.00 Q06=0.00 Q07=0.50 Q08=0.00 Q09=0.50 Q10=1.00 Q11=1.00 Q12=0.50 Q15=1.00 Q16=1.00 Q17=1.00 Q18=1.00 Q19=1.00
+>> bm25f: average Recall@3 = 0.794 (17 answerable), unanswerable refused 3/3
+   per query: Q01=1.00 Q02=1.00 Q03=1.00 Q04=1.00 Q05=1.00 Q06=0.00 Q07=0.50 Q08=0.00 Q09=0.50 Q10=1.00 Q11=1.00 Q12=0.50 Q15=1.00 Q16=1.00 Q17=1.00 Q18=1.00 Q19=1.00
+
+---------------------------------------------------------------------
+Scaling (runtime only, replicated corpus, bm25f, k = 3, median over all 20 queries)
+passages  build ms   V       postings  index KB    scan us     index us    speed-up
+155       0.170      670     1501      64.0        17.39       1.61        10.8x
+1550      1.224      679     16405     238.7       171.27      13.26       12.9x
+7750      3.485      719     82645     953.9       831.43      64.35       12.9x
+15500     6.790      769     165445    1868.1      1909.85     130.90      14.6x
+
+---------------------------------------------------------------------
+Top-k selection: bounded heap vs merge sort of all candidates (index engine, bm25f, broad query,
+minCoverage 0 so every candidate is ranked)
+  15500 passages, C = 9700 candidates, k = 3   : heap 739.5 us, merge sort 2835.1 us, same top-k: yes
+  15500 passages, C = 9700 candidates, k = 10  : heap 729.8 us, merge sort 2805.1 us, same top-k: yes
+  15500 passages, C = 9700 candidates, k = 100 : heap 793.0 us, merge sort 3011.7 us, same top-k: yes
+
+CSV files written to results/ (query_results.csv, latency.csv, scaling.csv)
