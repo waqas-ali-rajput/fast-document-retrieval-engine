@@ -14,7 +14,6 @@ __pycache__/
 # video render intermediates (frames, clips, audio parts)
 docs/video/build/
 
-# kept out of the public repo: course brief/rubric, member PDFs, raw screenshots
+# kept out of the public repo: course brief/rubric, member PDFs
 PBL - DSA*.pdf
 docs/members/
-Screenshots/

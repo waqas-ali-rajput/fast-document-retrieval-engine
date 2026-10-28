@@ -41,55 +41,55 @@ If there is not enough support, it answers **"No supported evidence found."**
 
 ## 3. Program output: command line
 
-![Build and a normal query. The current 2026 attendance notice (75 %) ranks first; the old 2025 notice matches more words (BM25 10.593) but is SUPERSEDED, so the freshness rule halves its score and it drops below.](../Screenshots/Screenshot 2026-10-26 212706.png)
+![Build and a normal query. The current 2026 attendance notice (75 %) ranks first; the old 2025 notice matches more words (BM25 10.593) but is SUPERSEDED, so the freshness rule halves its score and it drops below.](<../Screenshots/Screenshot 2026-10-26 212706.png>)
 
-![The same query timed over 201 runs: median 2.8 µs. A single first run (47.7 µs above) is slower because the program has just started.](../Screenshots/Screenshot 2026-10-26 212736.png)
+![The same query timed over 201 runs: median 2.8 µs. A single first run (47.7 µs above) is slower because the program has just started.](<../Screenshots/Screenshot 2026-10-26 212736.png>)
 
-![Unanswerable question. Passages share the word "student", but none matches 50 % of the concepts, so the program refuses instead of inventing a rule.](../Screenshots/Screenshot 2026-10-26 212755.png)
+![Unanswerable question. Passages share the word "student", but none matches 50 % of the concepts, so the program refuses instead of inventing a rule.](<../Screenshots/Screenshot 2026-10-26 212755.png>)
 
-![Linear-scan baseline (--mode scan). The revised date sheet D20-P2 is returned first, with its source and the reason for its score.](../Screenshots/Screenshot 2026-10-26 212814.png)
+![Linear-scan baseline (--mode scan). The revised date sheet D20-P2 is returned first, with its source and the reason for its score.](<../Screenshots/Screenshot 2026-10-26 212814.png>)
 
-![Coverage ranker with k = 5 and synonym expansion (submission ~ submit, penalty ~ fine). The superseded D28 notice is flagged with a warning.](../Screenshots/Screenshot 2026-10-26 212842.png)
+![Coverage ranker with k = 5 and synonym expansion (submission ~ submit, penalty ~ fine). The superseded D28 notice is flagged with a warning.](<../Screenshots/Screenshot 2026-10-26 212842.png>)
 
-![Interactive mode: 155 passages and 670 unique terms loaded.](../Screenshots/Screenshot 2026-10-26 212904.png)
+![Interactive mode: 155 passages and 670 unique terms loaded.](<../Screenshots/Screenshot 2026-10-26 212904.png>)
 
 ## 4. Program output: tests (`rag test`)
 
-![Tests T01-T13: empty corpus, blank query, missing word, repeated words, duplicates, hash collisions (4 buckets / 200 keys; all keys in one bucket; whole index in one chain of 670) and old/new notices.](../Screenshots/Screenshot 2026-10-26 212921.png)
+![Tests T01-T13: empty corpus, blank query, missing word, repeated words, duplicates, hash collisions (4 buckets / 200 keys; all keys in one bucket; whole index in one chain of 670) and old/new notices.](<../Screenshots/Screenshot 2026-10-26 212921.png>)
 
-![Tests T14-T23: scan = index (40/40), heap = merge sort (60/60), k limits, unanswerable questions, injection text, add/update/remove, duplicate id, tie-break. Result: 24/24 passed.](../Screenshots/Screenshot 2026-10-26 212952.png)
+![Tests T14-T23: scan = index (40/40), heap = merge sort (60/60), k limits, unanswerable questions, injection text, add/update/remove, duplicate id, tie-break. Result: 24/24 passed.](<../Screenshots/Screenshot 2026-10-26 212952.png>)
 
 ## 5. Program output: evaluation (`rag eval`)
 
-![Evaluation at 25 passages, coverage ranker: index memory 18.6 KB; Recall@3 0.833; unanswerable refused 3/3; scan 3.17 µs vs index 0.52 µs.](../Screenshots/Screenshot 2026-10-26 213037.png)
+![Evaluation at 25 passages, coverage ranker: index memory 18.6 KB; Recall@3 0.833; unanswerable refused 3/3; scan 3.17 µs vs index 0.52 µs.](<../Screenshots/Screenshot 2026-10-26 213037.png>)
 
-![25 passages with BM25 + freshness, then 50 passages (coverage): every row shows "same? yes" (scan and index agree).](../Screenshots/Screenshot 2026-10-26 213057.png)
+![25 passages with BM25 + freshness, then 50 passages (coverage): every row shows "same? yes" (scan and index agree).](<../Screenshots/Screenshot 2026-10-26 213057.png>)
 
-![50 passages: Recall@3 0.800 for both rankers; scan 4.6 µs vs index 0.79 µs.](../Screenshots/Screenshot 2026-10-26 213126.png)
+![50 passages: Recall@3 0.800 for both rankers; scan 4.6 µs vs index 0.79 µs.](<../Screenshots/Screenshot 2026-10-26 213126.png>)
 
-![100 passages: 1,024 buckets, longest chain 4; Recall@3 0.875; scan 9.98 µs vs index 1.26 µs.](../Screenshots/Screenshot 2026-10-26 213150.png)
+![100 passages: 1,024 buckets, longest chain 4; Recall@3 0.875; scan 9.98 µs vs index 1.26 µs.](<../Screenshots/Screenshot 2026-10-26 213150.png>)
 
-![100 passages (BM25 + freshness) and the full 155-passage corpus: index memory 64.0 KB, load factor 0.65, longest chain 4.](../Screenshots/Screenshot 2026-10-26 213205.png)
+![100 passages (BM25 + freshness) and the full 155-passage corpus: index memory 64.0 KB, load factor 0.65, longest chain 4.](<../Screenshots/Screenshot 2026-10-26 213205.png>)
 
-![155 passages: Recall@3 0.912 for both rankers; scan 16.75 µs vs index 1.49 µs; identical results everywhere ("YES"). Without synonyms Recall@3 drops to 0.794.](../Screenshots/Screenshot 2026-10-26 213224.png)
+![155 passages: Recall@3 0.912 for both rankers; scan 16.75 µs vs index 1.49 µs; identical results everywhere ("YES"). Without synonyms Recall@3 drops to 0.794.](<../Screenshots/Screenshot 2026-10-26 213224.png>)
 
-![Scaling to 15,500 passages: the speed-up grows from 10.1× to 14.6×. Bounded heap vs merge sort with 9,700 candidates: 679 µs vs 2,536 µs, same top-k.](../Screenshots/Screenshot 2026-10-26 213240.png)
+![Scaling to 15,500 passages: the speed-up grows from 10.1× to 14.6×. Bounded heap vs merge sort with 9,700 candidates: 679 µs vs 2,536 µs, same top-k.](<../Screenshots/Screenshot 2026-10-26 213240.png>)
 
-![rag stats: 155 passages, 1,557 tokens, 670 terms, 1,501 postings; index built in 0.235 ms; 65,520 bytes of index memory.](../Screenshots/Screenshot 2026-10-26 213306.png)
+![rag stats: 155 passages, 1,557 tokens, 670 terms, 1,501 postings; index built in 0.235 ms; 65,520 bytes of index memory.](<../Screenshots/Screenshot 2026-10-26 213306.png>)
 
 ## 6. Program output: desktop GUI
 
-![Search tab: a sample question with provenance, CURRENT badge, and matched/missing concepts.](../Screenshots/Screenshot 2026-10-26 213336.png)
+![Search tab: a sample question with provenance, CURRENT badge, and matched/missing concepts.](<../Screenshots/Screenshot 2026-10-26 213336.png>)
 
-![Compare scan vs index (median of 201 runs each): the index is 6.9× faster and both engines return the same ranked passages.](../Screenshots/Screenshot 2026-10-26 213357.png)
+![Compare scan vs index (median of 201 runs each): the index is 6.9× faster and both engines return the same ranked passages.](<../Screenshots/Screenshot 2026-10-26 213357.png>)
 
-![Dataset tab: all 155 passages with metadata; superseded passages are shown in red.](../Screenshots/Screenshot 2026-10-26 213418.png)
+![Dataset tab: all 155 passages with metadata; superseded passages are shown in red.](<../Screenshots/Screenshot 2026-10-26 213418.png>)
 
-![Tests tab: the same 24 tests, 24/24 passed.](../Screenshots/Screenshot 2026-10-26 213434.png)
+![Tests tab: the same 24 tests, 24/24 passed.](<../Screenshots/Screenshot 2026-10-26 213434.png>)
 
-![Evaluation tab: runs rag eval inside the GUI.](../Screenshots/Screenshot 2026-10-26 213452.png)
+![Evaluation tab: runs rag eval inside the GUI.](<../Screenshots/Screenshot 2026-10-26 213452.png>)
 
-![Index stats tab: vocabulary, hash-table health and memory figures.](../Screenshots/Screenshot 2026-10-26 213503.png)
+![Index stats tab: vocabulary, hash-table health and memory figures.](<../Screenshots/Screenshot 2026-10-26 213503.png>)
 
 ## 7. Conclusion
 
